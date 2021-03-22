@@ -1,0 +1,24 @@
+{
+    "name": "macro_calculator",
+    "version": "1.0.0",
+    "description": "A web app that calculates your caloric and nutritional input using javascript and edamam-api",
+    "main": "./src/app.js",
+    "scripts": {
+        "start": "webpack-dev-server --mode development --open --hot",
+        "build": "webpack --mode production"
+    },
+    "author": "Vladan Bajčeta",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/preset-env": "^7.13.10",
+        "@babel/preset-react": "^7.12.13",
+        "babel-loader": "^8.2.2",
+        "html-webpack-plugin": "^5.3.1",
+        "webpack": "^5.27.0",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+        "webpack-cli": "^3.3.12"
+    }
+}
