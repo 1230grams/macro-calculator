@@ -126,7 +126,6 @@ export class App {
                 this.listElementUpdateColor();
 
                 const id = this.ItemCtrl.currentItem.id;
-                this.UICtrl.showMessage("updated");
             });
         document
             .getElementById(itemNames.cancelbtn)
@@ -155,6 +154,8 @@ export class App {
 
                 this.storageCtrl.removeItemFromStorage(id);
                 this.storageCtrl.storeItem(gotItems);
+
+                this.UICtrl.showMessage("updated");
 
                 this.UICtrl.showInitState();
             });

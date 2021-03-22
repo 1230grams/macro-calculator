@@ -73,12 +73,18 @@ export class UICtrl {
         const itemNames = this.getUISelectors();
 
         const listGroup = document.querySelector(itemNames.lgroup);
-        const li = document.createElement("div");
 
-        li.innerHTML = `<button type="button" class="list-group-item list-group-item-action d-flex justify-content-between"><span><strong>${foodAmount}</strong> ${foodUnits} of <strong>${foodName}</strong></em></span><span><i class="fa fa-edit align-items-md-end" ></i></span></button>`;
-        li.id = `item-${id}`;
-
-        listGroup.appendChild(li);
+        listGroup.innerHTML += `<div id="item-${id}">
+        <button 
+            class="list-group-item list-group-item-action d-flex justify-content-between style=''">
+            <span>
+                <strong>${foodAmount}</strong> ${foodUnits} of <strong>${foodName}</strong>
+            </span>
+            <span>
+                <i class="fa fa-edit align-items-md-end"></i>
+            </span>
+        </button>
+    </div>`;
     }
 
     submitChange(id) {
@@ -234,7 +240,7 @@ export class UICtrl {
         objArray.forEach((element) => {
             html += `<div id="item-${element.id}">
             <button 
-                class="list-group-item list-group-item-action d-flex justify-content-between">
+                class="list-group-item list-group-item-action d-flex justify-content-between style=''">
                 <span>
                     <strong>${element.foodAmount}</strong> ${element.foodUnits} of <strong>${element.foodName}</strong>
                 </span>
